@@ -11,15 +11,28 @@
     "type": "git",
     "url": "git+https://github.com/MAKAHAL/project2.git"
   },
-  "author": "",
+  "author": "Makah",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MAKAHAL/project2/issues"
   },
   "homepage": "https://github.com/MAKAHAL/project2#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "errorhandler": "^1.5.1",
     "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
     "index": "^0.4.0",
-    "mysql": "^2.17.1"
-  }
+    "mongoose": "^5.8.9",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.21.3"
+  },
+  "devDependencies": {}
 }
