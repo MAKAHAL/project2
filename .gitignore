@@ -1,1 +1,10 @@
+<<<<<<< HEAD
 node_modules
+=======
+
+node_modules
+config/config.json
+.env
+
+
+>>>>>>> 86a0519443d5b531e678f2306f2efecb2a2b2c5e
