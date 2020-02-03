@@ -1,34 +1,112 @@
-<<<<<<< HEAD
-body{
-  background-image: url(./images/247102.jpg);
-  background-repeat: no-repeat;
-    background-size: cover; 
-   
-    height: auto;
-};
 
 
-
-h2{
-  color: black;
-  size: 50%;
-  
-}
-=======
-body {
-    background-color: yellow;
+.main {
+    padding: 0px 10px;
 }
 
-div {
-    background-color: white;
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .login-form {
+        margin-top: 10%;
+    }
+
+    .register-form {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        margin-left: 40%;
+    }
+    .sidenav {
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+    .login-form {
+        margin-top: 80%;
+    }
+    .register-form {
+        margin-top: 20%;
+    }
+}
+
+.login-main-text {
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2 {
+    font-weight: 300;
+}
+
+.btn {
+    background-color: #000 !important;
+    color: #fff;
+    margin-left: 90%;
+}
+
+body.home {
+    background-image: url(./images/image.png);
+    height: 5%;
+    width: 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.makah {
+    background-image: url(./images/cards.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 38%;
+    width: 38%;
+}
+
+#signin {
+    font-size: large;
+    color: rgb(172, 101, 101);
+    margin-bottom: 30%;
+    text-align: center;
+}
+
+#signinp {
+    margin-bottom: 20%;
+    margin-left: 2%;
+    color: rgb(172, 101, 101);
+    text-align: center;
+}
+
+#signup {
+    font-size: large;
+    color: darkred;
+    text-align: center;
+}
+
+#logout {
+    color: #f44336;
+}
+
+#btninl {
+    color: rgb(231, 135, 111);
+    margin-left: 7%;
+    margin-top: 20%;
+    text-align: center;
 }
 
 /* fonts & color */
 .subtitles {
     font-size: 20px;
     font-weight: bolder;
-    color: #002080;
-
+    color: #2196F3;
 }
 
 .numbers {
@@ -39,7 +117,7 @@ div {
 /* line height */
 p {
     line-height: 90%;
-    color: #2a2a2a;
+    color: black;
 }
 
 /* align text*/
@@ -47,12 +125,11 @@ p {
     text-align: right;
 }
 
-
 /* navbar */
 .topnav-center {
     text-align: center;
     background-color: transparent;
-    color: white;
+    color: rgb(173, 125, 125);
     font-weight: bolder;
 }
 
@@ -60,9 +137,8 @@ p {
     float: right;
     background-image: none;
     background-color: transparent;
-    color: white;
+    color: rgb(158, 116, 116);
     padding-right: 20px;
-
 }
 
 #bar-one {
@@ -70,7 +146,6 @@ p {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: url("../images/nav-background.jpg");
     background-size: cover;
     padding-top: 50px;
     padding-bottom: 30px;
@@ -84,14 +159,14 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: rgb(199, 158, 158);
     text-align: right;
     padding: 14px 20px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: rgb(224, 104, 104);
 }
 
 #logo {
@@ -99,13 +174,12 @@ li a:hover {
     font-weight: bolder;
 }
 
-
 #bar-two {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: white;
+    background-color: rgb(184, 144, 144);
     box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .2);
     margin-top: -15px;
 }
@@ -115,9 +189,8 @@ li a:hover {
 }
 
 .bar-text {
-    color: black;
+    color: rgb(192, 166, 166);
 }
-
 
 /* divs */
 div {
@@ -132,6 +205,8 @@ div {
     border: solid;
     border-width: 1px;
     justify-content: space-between;
+    background-color: rgb(185, 157, 157);
+    color: black;
 }
 
 .flex-item {
@@ -156,6 +231,8 @@ div {
 #checkings-box,
 #savings-box {
     height: 25%;
+    color: #e9cbcb;
+    background-color: rgb(238, 229, 229);
 }
 
 #help-box,
@@ -170,6 +247,7 @@ div {
 #transactions-box {
     height: 56%;
     overflow: scroll;
+    color: black;
 }
 
 /* table */
@@ -237,9 +315,9 @@ tr:nth-child(even) {
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(230, 220, 220);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(230, 222, 222, 0.6);
     /* Black w/ opacity */
 }
 
@@ -316,6 +394,7 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+
 }
 
 
@@ -332,4 +411,6 @@ body{
     color: black;
     size: 50%;
   }
->>>>>>> 86a0519443d5b531e678f2306f2efecb2a2b2c5e
+
+
+

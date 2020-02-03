@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Bankur</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- bootstrap jquery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <!-- table2excel -->
+    <script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+
+    <!-- jquery ui -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="light" id="menu">
+
+            <div class="flex-item-one clickable title">BANKI</div>
+            <div class="flex-item-one clickable nav-btn" id="home-button" data-value="home-display">Home</div>
+            <div class="flex-item-one clickable nav-btn" id="transaction-button" data-value="transaction-display">
+                Transaction</div>
+            <div class="flex-item-one clickable nav-btn" id="invest-button" data-value="invest-display">Invest</div>
+            <div class="flex-item-one clickable nav-btn" id="settings-button" data-value="logout-display">Logout
+            </div>
+            <div class="flex-item-one" id="username">Sarah Green</div>
+
+        </div>
+        <div class="hold"></div>
+
+        <div class="light content display-content" id="home-display">
+            <div class="all-holder">
+                <div class="image-holder"><img src="./images/Elon%20Musk.jpg" alt="profile" class="contact-image"></div>
+                <div class="transaction-holder">
+                    <span class="highlight">Elon Musk</span> paid <span class="highlight">Carlos Ghosn</span>
+                    <p>For your next Cybertruck</p>
+                    <p class="clickable" id="like-unlike"><span class="heart" data-heart="false">&#9825</span></p>
+                </div>
+            </div>
+
+            <div class="all-holder">
+                <div class="image-holder"><img src="./images/Janet%20Wes.jpg" alt="profile" class="contact-image">
+                </div>
+                <div class="transaction-holder">
+                    <span class="highlight">Janet Wes</span> charged <span class="highlight">Noble Babu</span>
+                    <p>Crawfish Cafe! 🦐</p>
+                    <p class="clickable" id="like-unlike"><span class="heart" data-heart="false">&#9825</span></p>
+                </div>
+            </div>
+
+            <div class="all-holder">
+                <div class="image-holder"><img src="./images/Ariana%20Grande.jpg" alt="profile" class="contact-image">
+                </div>
+                <div class="transaction-holder">
+                    <span class="highlight">Ariana Grande</span> paid <span class="highlight">BTS</span>
+                    <p>Post Grammy's snack</p>
+                    <p class="clickable" id="like-unlike"><span class="heart" data-heart="false">&#9825</span></p>
+                </div>
+            </div>
+
+            <div class="all-holder">
+                <div class="image-holder"><img src="./images/Jay%20Wilkens.jpg" alt="profile" class="contact-image">
+                </div>
+                <div class="transaction-holder">
+                    <span class="highlight">Jay Wilkens</span> paid <span class="highlight">Pepe Mendoza</span>
+                    <p>Costco Run 🏃🏻‍♂</p>
+                    <p class="clickable" id="like-unlike"><span class="heart" data-false="false">&#9825</span></p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <!-- transaction display -->
+        <div class="content light display-content" id="transaction-display">
+            <div class="card light">
+                <div class="row mt-2">
+                    <div class="col-md-3"></div>
+                    <!-- sucky nav bar fix bootstrap link?? -->
+                    <div class="col-md-8">
+                        <div class="input-group">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-warning dropdown-toggle rounded" type="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contacts</button>
+                                <div class="dropdown-menu" id="contact-list">
+                                    <a class="dropdown-item contact-addon">Makah</a>
+                                    <a class="dropdown-item contact-addon">Zaid</a>
+                                    <a class="dropdown-item contact-addon">Zeke</a>
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-11" id="transaction-contact"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- input for $ amount -->
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 center" id="dollar">
+                        $<span id="transaction-amount"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- number keyboard -->
+
+            <div class="row">
+                <div class="col-md-3 calculator"></div>
+                <div class="col-md-2 title calculator clickable" value="1">1</div>
+                <div class="col-md-2 title calculator clickable" value="2">2</div>
+                <div class="col-md-2 title calculator clickable" value='3'>3</div>
+                <div class="col-md-3 calculator"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 calculator"></div>
+                <div class="col-md-2 title calculator clickable" value="4">4</div>
+                <div class="col-md-2 title calculator clickable" value="5">5</div>
+                <div class="col-md-2 title calculator clickable" value="6">6</div>
+                <div class="col-md-3 calculator"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 calculator"></div>
+                <div class="col-md-2 title calculator clickable" value="7">7</div>
+                <div class="col-md-2 title calculator clickable" value="8">8</div>
+                <div class="col-md-2 title calculator clickable" value="9">9</div>
+                <div class="col-md-3 calculator"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 calculator"></div>
+                <div class="col-md-2 title calculator clickable" value=".">.</div>
+                <div class="col-md-2 title calculator clickable" value="0">0</div>
+                <div class="col-md-2 title clickable" id="delete" value="x">x</div>
+                <div class="col-md-3 calculator"></div>
+            </div>
+
+            <!-- message input -->
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Message" id="transaction-message">
+                    </div>
+                </div>
+            </div>
+
+            <!-- buttons -->
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3 title"><button type="button" class="btn btn-outline-warning btn-block"
+                        id="request-button">Request</button></div>
+                <div class="col-md-3 title"><button type="button" class="btn btn-outline-warning btn-block"
+                        id="pay-button">Pay</button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <!-- balance avaialable -->
+            <div class="row mt-3">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 center">Balance Available: $<span id="available-balance">421.34</span></div>
+            </div>
+
+        </div>
+
+
+
+        <!-- invest display -->
+
+        <div class="content light display-content" id="invest-display">
+            <div class="card light">
+                <div class="row mt-4">
+                    <div class="col-md-2"></div>
+                    <div class="col-md">Savings Balance: $<span id="savings-balance">21.45</span></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="ticker-input" placeholder="Enter ticker symbol">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-outline-warning btn-block"
+                            id="ticker-btn">Search</button>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+
+
+                <div id="ticker-holders">
+
+
+                    <!-- ticker -->
+                    <div class="row mt-3 ticker-row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-1 clickable ex-out">x</div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-5 ticker">AAPL</div>
+                                <div class="col-md-2">$294.00</div>
+                                <div class="col-md-2">Bullish</div>
+                                <div class="col-md-3">P/E Ratio 23</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-3 ticker-row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-1 clickable ex-out">x</div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-5 ticker">TSLA</div>
+                                <div class="col-md-2">$564.00</div>
+                                <div class="col-md-2">Bullish</div>
+                                <div class="col-md-3">P/E Ratio 210</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+
+<style>
+    .container {
+        display: flex;
+        max-width: 100%;
+        height: 600px;
+        justify-content: space-evenly;
+        margin: 0;
+        margin-top: 4%;
+        padding: 2%;
+    }
+
+    #menu {
+        display: flex;
+        width: 20%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .flex-item-one {
+        list-style-type: none;
+        text-align: center;
+    }
+
+
+    .hold {
+        display: flex;
+        width: 20%;
+    }
+
+    .content {
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .all-holder {
+        display: flex;
+        max-width: 100%;
+        height: 85px;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .image-holder {
+        display: flex;
+        padding-left: 10%;
+        width: 30%;
+        height: 80px;
+    }
+
+    .transaction-holder {
+        width: 80%;
+    }
+
+    #contact-list {
+        z-index: 1;
+    }
+
+
+
+    body {
+        background-color: #121212;
+        color: white;
+    }
+
+    .light {
+        border-color: #292929;
+        background-color: #292929;
+        opacity: .9;
+    }
+
+    .fixed-height {
+        height: 610px;
+    }
+
+    .set-height {
+        height: 610px;
+        background-color: 292929;
+    }
+
+    .fill-height {
+        height: 100%;
+    }
+
+    .calculator {
+        height: 60px;
+    }
+
+    #delete {
+        height: 80px;
+    }
+
+    .scrollable {
+        overflow: scroll;
+    }
+
+    /* fonts */
+    #username {
+        font-weight: 800;
+    }
+
+    .title {
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    li {
+        text-align: center;
+    }
+
+    .highlight {
+        font-weight: 800;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    #dollar,
+    #transaction-amount {
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+    .ticker {
+        color: #f0ad4e;
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+
+    #ticker-cost {
+        font-size: 10px;
+    }
+
+    .ticker-row {
+        border-bottom: 1px solid white;
+
+    }
+
+    #transaction-contact {
+        width: 60%;
+        font-size: 20px;
+        font-weight: 800;
+        padding-left: 25%;
+        text-align: right;
+    }
+
+
+
+
+
+    /* image css */
+    img {
+        max-height: 100%;
+        max-width: 100%;
+        border-radius: 50%;
+    }
+
+
+    /* cursor */
+    .clickable {
+        cursor: pointer;
+    }
+
+
+    /* container displays */
+    #home-display,
+    #transaction-display,
+    #invest-display {
+        display: none;
+    }
+</style>
+
+
+<script src="js/add.js" type="text/javascript"></script>
+<script src="js/all.js" type="text/javascript"></script>
+<script>
+
+    $('.ex-out').on('click', function(){
+        $(this).parent().remove();
+    });
+
+    // like buttons
+    let heart = (`<span class="heart" data-heart="true">&#9829</span>`);
+    let breakHeart = (`<span class="heart" data-heart="false">&#9825</span>`);
+
+    $(document).on('click', '.heart', function () {
+        let status = $(this).data('heart');
+
+        if (status) {
+            $(this).hide();
+            $(this).parent().append(breakHeart)
+        } else {
+            $(this).hide();
+            $(this).parent().append(heart);
+        }
+    })
+
+    // 
+
+
+    $('.nav-btn').on('click', function () {
+        let link = $(this).data('value');
+
+        console.log(link);
+        $('.display-content').hide();
+        $('#' + link).show();
+
+    })
+
+
+
+
+    // transaction tab js
+
+    $('.calculator').on('click', function () {
+        let numValue = $(this).text();
+        console.log(numValue)
+        $('#transaction-amount').append(numValue);
+    });
+
+    $('#delete').on('click', function () {
+        $('#transaction-amount').empty();
+    });
+
+    $('.contact-addon').on('click', function () {
+        let sendingContact = $(this).text()
+        console.log(sendingContact);
+        $('#transaction-contact').empty();
+        $('#transaction-contact').append(sendingContact);
+    });
+</script>
+
+</html>
