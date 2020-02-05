@@ -1,4 +1,4 @@
-const authController = require('./authcontroller.js');
+const authController = require('./authController.js');
  
   
 module.exports = function(app, passport) { 
