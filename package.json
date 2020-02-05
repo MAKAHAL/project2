@@ -9,9 +9,6 @@
     "express": "^4.17.1",
     "handlebars": "^4.7.3",
     "passport": "^0.4.1",
-      
-      "body-parser":"*",
-      
       "bcrypt": "^0.8.5"
     
   },
