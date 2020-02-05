@@ -4,18 +4,22 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "bcrypt": "^0.8.5",
     "bcrypt-nodejs": "0.0.3",
     "cache": "^2.1.0",
+    "cashe": "^0.3.1",
     "clean": "^4.0.2",
+    "cookie-parser": "^1.4.4",
+    "cookie-session": "^1.4.0",
+    "cookieparser": "^0.1.0",
     "express": "^4.17.1",
-    "handlebars": "^4.7.3",
-    "local": "^0.3.3",
-    "method": "^2.0.0",
-    "override": "0.0.1",
+    "express-session": "^1.17.0",
+    "method-override": "^3.0.0",
     "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "session": "^0.1.0"
+    "session": "^0.1.0",
+    "simple-jwt": "^1.0.3",
+    "telesignsdk": "^2.2.1"
   },
   "devDependencies": {},
   "scripts": {
