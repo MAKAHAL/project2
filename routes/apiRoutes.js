@@ -1,5 +1,6 @@
 const db = require('../models');
 
+
 console.log(db);
 module.exports = function (app) {
 
@@ -9,16 +10,20 @@ module.exports = function (app) {
     app.get('/', function (req, res) {
         res.render('first');
     });
+ 
+app.get('/signin', function (req, res) {
+    // client.sms.message(callback, '+8329023510', 'Someone logged into your account', 'MKT');
+    res.render('signin');
+  
+});
 
-    app.get('/signin', function (req, res) {
-        res.render('signin');
-        // client.sms.message(callback, '+8329023510', 'Someone logged into your account', 'MKT');
-    });
+app.get('/signup', function (req, res) {
+    // client.sms.message(callback, '+8329023510', 'Thank you for signing up', 'MKT');
+    res.render('signup');
+   
+});
 
-    app.get('/signup', function (req, res) {
-        res.render('signup');
-        // client.sms.message(callback, '+8329023510', 'Thank you for signing up', 'MKT');
-    });
+ 
 
     app.get('/logout', function (req, res) {
         res.render('logout');
