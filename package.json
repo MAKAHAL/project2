@@ -9,8 +9,7 @@
     "express": "^4.17.1",
     "handlebars": "^4.7.3",
     "passport": "^0.4.1",
-      "bcrypt": "^0.8.5"
-    
+    "bcrypt": "^0.8.5"
   },
   "devDependencies": {},
   "scripts": {
@@ -26,5 +25,5 @@
   "bugs": {
     "url": "https://github.com/MAKAHAL/project2/issues"
   },
-  "homepage": "https://github.com/MAKAHAL/project2#readme"}
-
+  "homepage": "https://github.com/MAKAHAL/project2#readme"
+}
