@@ -1,14 +1,34 @@
-const Sequelize = require('sequelize');
-const sequelize = require('../config/connection.js');
+module.exports = function(sequelize, Sequelize){
+    const Transaction = sequelize.define('transaction', {
+        id: {
+            autoIncrement: true,
+            primaryKey: true,
+            type: Sequelize.INTEGER
+        },
+        username: {
+            type: Sequelize.STRING, 
+            notEmpty: true
+        }, 
+        contactName: {
+            type: Sequelize.STRING, 
+            notEmpty: true
+        }, 
+        date: {
+            type: Sequelize.DATE
+        }, 
+        amount: {
+            type: Sequelize.DECIMAL(10,2)
+        }, 
+        type: {
+            type: Sequelize.STRING
+        }, 
+        message: {
+            type: Sequelize.STRING
+        }, 
+        accountBalance: {
+            type: Sequelize.DECIMAL(10,2)
+        }
+    });
 
-let Transaction = sequelize.define('transaction', {
-    routeName: Sequelize.STRING, 
-    // user: Sequelize.STRING,  should this be added to be able to join the user to further data?
-    recipient: Sequelize.STRING, 
-    date: Sequelize.DATE,
-    amount: Sequelize.INTEGER, 
-});
-
-Transaction.sync();
-
-module.exports = Transaction;
+    return Transaction;
+}

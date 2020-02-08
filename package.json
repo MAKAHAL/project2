@@ -1,50 +1,42 @@
 {
-  "name": "banki_project",
+  "name": "project2",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "cache": "^2.1.0",
+    "cashe": "^0.3.1",
+    "clean": "^4.0.2",
+    "cookie-session": "^1.4.0",
+    "cookieparser": "^0.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "method-override": "^3.0.0",
+    "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sequelize": "^5.21.3",
+    "session": "^0.1.0",
+    "simple-jwt": "^1.0.3",
+    "telesignsdk": "^2.2.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-
-
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAKAHAL/project2.git"
+  },
   "author": "",
-
   "license": "ISC",
-  "dependencies": {
-
-    "body-parser": "^1.19.0",
-
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.19.0",
-    "connect-flash": "^0.1.1",
-    "cors": "^2.8.5",
-    "errorhandler": "^1.5.1",
-    "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
-    "express-session": "^1.17.0",
-    "index": "^0.4.0",
-    "mongoose": "^5.8.9",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.1.0",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "sequelize": "^5.21.3"
+  "bugs": {
+    "url": "https://github.com/MAKAHAL/project2/issues"
   },
-  "devDependencies": {}
-
-    "express": "^4.17.1",
-    "http": "0.0.0",
-    "mysql2": "^2.1.0",
-
-    "nodemon": "^2.0.2",
-    "sequelize": "^5.21.3",
-    "socket.io": "^2.3.0"
-  },
-  "devDependencies": {},
-  "description": ""
-=======
-    "sequelize": "^5.21.3"
-  }
-
+  "homepage": "https://github.com/MAKAHAL/project2#readme"
 }
